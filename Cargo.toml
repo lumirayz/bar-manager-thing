@@ -1,0 +1,12 @@
+[package]
+name = "bar"
+version = "0.1.0"
+authors = ["lumirayz <lumirayz@gmail.com>"]
+
+[dependencies]
+time = "*"
+alsa-sys = "*"
+dbus = "*"
+
+[dependencies.mpd]
+git = "https://github.com/kstep/rust-mpd.git"
