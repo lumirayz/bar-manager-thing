@@ -66,27 +66,3 @@ impl MpdSource {
         self.state.lock().unwrap()
     }
 }
-
-/*
-impl Component for MpdComponent {
-    fn render(&self) -> String {
-        let guard = self.state.lock().unwrap();
-        match *guard {
-            MpdState::Connected(ref state, ref song) => {
-                let songname = match *song {
-                    Some(ref s) => s.file.clone(),
-                    None => "-".to_string()
-                };
-                let statename = format!("%{{T2}}\u{00E05C}{}%{{T-}}", match state.state {
-                    mpd::State::Play => "\u{00E058}",
-                    mpd::State::Pause => "\u{00E057}",
-                    mpd::State::Stop => "\u{00E059}"
-                });
-                format!("{} %{{T1}}{}%{{T-}}", statename, songname)
-            },
-            MpdState::Error(ref s) => s.clone(),
-            MpdState::NotConnected => "Not Connected".to_string()
-        }
-    }
-}
-*/
